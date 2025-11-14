@@ -322,6 +322,23 @@ class _TasksScreenState extends State<TasksScreen> {
                               ? 'Unmark important'
                               : 'Mark important',
                         ),
+                        const SizedBox(width: 6),
+                        IconButton(
+                          iconSize: 20,
+                          padding: const EdgeInsets.all(4),
+                          constraints: const BoxConstraints(
+                            minWidth: 36,
+                            minHeight: 36,
+                          ),
+                          icon: const Icon(
+                            Icons.delete_outline,
+                            color: Colors.redAccent,
+                          ),
+                          onPressed: () {
+                            setState(() => tasks.remove(t));
+                          },
+                          tooltip: 'Delete task',
+                        ),
                       ],
                     ),
                   ),
