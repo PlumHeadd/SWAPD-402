@@ -63,7 +63,7 @@ class _TasksScreenState extends State<TasksScreen> {
           right: 16,
           top: 16,
           bottom: MediaQuery.of(c).viewInsets.bottom + 16,
-        ),
+        ),     
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,

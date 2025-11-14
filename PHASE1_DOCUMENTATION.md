@@ -31,7 +31,11 @@ Tasky is a productivity application designed to help users manage their tasks an
 **Completed Features:**
 - Bottom navigation with three main tabs (Home, Tasks, Timer)
 - Home screen with dashboard, stats placeholders, and quick action buttons
-- Tasks screen with full CRUD functionality (Create, Read, Update, Delete)
+- Tasks screen with complete CRUD functionality:
+  - **Create**: Add tasks with title, description, priority, and due date
+  - **Read**: Display all tasks in organized list view
+  - **Update**: Toggle task completion status and importance flag
+  - **Delete**: Remove tasks with delete button
 - Timer screen with countdown functionality and session management
 - Responsive design across different screen sizes
 - Consistent color scheme (deep purple theme) and typography
@@ -45,63 +49,91 @@ Tasky is a productivity application designed to help users manage their tasks an
 ---
 
 ### Phase 2 (Week 9) - Core Functionality and State Management
-**Milestone**: Implement persistent data storage and enhanced state management
+**Milestone**: Implement persistent data storage and improved state management
 
 **Planned Features:**
-- Local data persistence using shared_preferences or SQLite
+- Local data persistence using shared_preferences
 - Task persistence across app sessions
 - Timer session history tracking
-- Enhanced state management (Provider or Riverpod)
-- Task filtering and sorting capabilities
-- Statistics calculation (completed tasks, total focus time)
+- Task filtering (show all/completed/pending)
+- Task sorting (by date, priority)
+- Statistics calculation (completed tasks count, total focus time)
 
 **Technical Goals:**
-- Implement database schema for tasks and sessions
-- Set up state management architecture
-- Add data validation and error handling
+- Implement local storage for tasks and sessions
+- Improve state management patterns
+- Add input validation
 
 ---
 
 ### Phase 3 (Week 11) - Advanced Features and Polish
-**Milestone**: Add advanced functionality and improve user experience
+**Milestone**: Add enhanced functionality and improve user experience
 
 **Planned Features:**
-- Task categories and tags
-- Notifications for task deadlines
-- Timer notifications and sound alerts
-- Dark mode support
-- Task search functionality
-- Export/import tasks
-- Weekly/monthly productivity reports
+- Task categories or tags
+- Timer completion alerts
+- Dark mode toggle
+- Task search by title
+- Productivity statistics dashboard
+- App settings page
 
 **Technical Goals:**
-- Implement local notifications
-- Add theme switching capability
-- Optimize performance
-- Enhance UI animations and transitions
+- Implement theme switching
+- Add sound/vibration for timer completion
+- Optimize app performance
+- Improve UI transitions
 
 ---
 
-### Phase 4 (Week 13) - Testing and Deployment
-**Milestone**: Finalize app and prepare for release
+### Phase 4 (Week 13) - Testing and Finalization
+**Milestone**: Complete testing and prepare final version
 
 **Planned Activities:**
-- Comprehensive testing (unit, widget, integration tests)
+- Testing (widget tests for key features)
 - Bug fixes and performance optimization
-- User feedback implementation
-- App icon and splash screen design
-- Prepare for app store deployment
-- Final documentation and code cleanup
+- Final UI polish and refinements
+- App icon design
+- Complete user documentation
+- Final code review and cleanup
 
 **Deliverables:**
-- Fully tested production-ready app
-- Complete user documentation
-- Deployment to test environment
+- Tested and polished app
+- User guide documentation
 - Final presentation materials
+- Clean, well-documented codebase
 
 ---
 
-## 3. Current Technical Implementation
+## 3. App Screenshots
+
+### Home Screen
+![Home Screen](screenshots/home_screen.png)
+
+The home screen provides a welcoming dashboard with:
+- Welcome message and motivational quote
+- Quick stats display (Tasks Today, Focus Time, Streak)
+- Three quick action buttons: Add Task, Start Timer, View Tasks
+
+### Tasks Screen
+![Tasks Screen](screenshots/tasks_screen.png)
+
+The tasks screen enables complete task management with:
+- Modal for adding new tasks with title, description, priority, and due date
+- Task list showing all created tasks
+- Complete CRUD operations (Create, Read, Update, Delete)
+
+### Timer Screen
+![Timer Screen](screenshots/timer_screen.png)
+
+The focus timer screen includes:
+- Large circular timer display with gradient styling
+- Start, Pause, and Reset controls
+- Saved sessions list with custom durations
+- Create new session modal
+
+---
+
+## 4. Current Technical Implementation
 
 ### Architecture
 - **Framework**: Flutter (Dart)
@@ -118,17 +150,19 @@ Tasky is a productivity application designed to help users manage their tasks an
 - Responsive layout using MediaQuery for font scaling
 
 #### Tasks Screen
-- Task list with numbered tasks and priority indicators
-- Add task modal with:
-  - Title and description fields
-  - Important/urgent checkbox
-  - Due date and time picker
-- Task item features:
-  - Strike-through for completed tasks
-  - Star icon for important tasks
-  - Check icon to mark as finished
-  - Color-coded avatars (red for important, purple for normal)
+- Complete CRUD operations:
+  - **Create**: Task creation modal with title, description, important/urgent checkbox, and due date/time picker
+  - **Read**: Scrollable task list with all task details visible
+  - **Update**: Toggle buttons to mark tasks as finished or important
+  - **Delete**: Delete button (trash icon) to remove tasks from list
+- Task list features:
+  - Numbered tasks with auto-incrementing IDs
+  - Priority indicators (red avatar for important, purple for normal)
+  - Strike-through styling for completed tasks
+  - Truncated descriptions (2 lines max) with ellipsis
+  - Created and due date timestamps displayed
 - Empty state message when no tasks exist
+- Floating action button for quick task addition
 
 #### Timer Screen
 - Large circular timer display with gradient background
@@ -161,10 +195,10 @@ Basic functionality with in-memory storage. Tasks and sessions are lost when app
 Tasks and sessions persist using local database. State management improved for better performance.
 
 ### Phase 3 Enhancement
-Advanced features like categories, notifications, and detailed analytics added.
+Additional features like categories, dark mode, and search added for better usability.
 
 ### Phase 4 Polish
-Final testing, performance optimization, and deployment preparation.
+Final testing, bug fixes, and documentation completed.
 
 ---
 
@@ -186,16 +220,16 @@ Final testing, performance optimization, and deployment preparation.
 - [ ] Statistics accurately calculated
 
 ### Phase 3
-- [ ] All advanced features functional
-- [ ] Notifications working
-- [ ] Dark mode implemented
-- [ ] Performance optimized
+- [ ] Categories or tags implemented
+- [ ] Dark mode working
+- [ ] Search functionality added
+- [ ] Statistics displayed
 
 ### Phase 4
-- [ ] All tests passing
-- [ ] App store ready
-- [ ] Complete documentation
-- [ ] User acceptance testing completed
+- [ ] Widget tests created
+- [ ] All bugs fixed
+- [ ] App icon designed
+- [ ] Documentation completed
 
 ---
 
